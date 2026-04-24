@@ -74,15 +74,7 @@
 
   .logo { display: flex; align-items: center; cursor: pointer; text-decoration: none; transition: transform 0.2s ease; }
   .logo:hover { transform: scale(1.03); }
-  .logo-frame {
-    background: #000;
-    border-radius: 12px;
-    padding: 6px 14px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 4px 16px rgba(108,99,255,0.35), inset 0 0 0 1px rgba(108,99,255,0.25);
-  }
-  .logo-img { height: 40px; width: auto; display: block; }
+  .logo-img { height: 48px; width: auto; display: block; filter: drop-shadow(0 4px 12px rgba(108,99,255,0.35)); }
 
   .nav-actions { display: flex; gap: 12px; }
   .btn { font-family: var(--font); font-size: 0.875rem; font-weight: 500; padding: 9px 22px; border-radius: 50px; cursor: pointer; transition: all 0.22s ease; border: none; outline: none; }
@@ -417,9 +409,7 @@
 
 <nav>
   <a class="logo" onclick="showHome()">
-    <div class="logo-frame">
-      <img src="logo.png" alt="Sound2Text" class="logo-img">
-    </div>
+    <img src="logo.png" alt="Sound2Text" class="logo-img">
   </a>
   <div class="nav-actions">
     <button class="btn btn-secondary" onclick="showLibrary()">Library</button>
