@@ -72,18 +72,17 @@
   }
   @keyframes slideDown { from { transform: translateY(-100%); opacity:0; } to { transform: translateY(0); opacity:1; } }
 
-  .logo { display: flex; align-items: center; gap: 10px; cursor: pointer; text-decoration: none; }
-  .logo-mark {
-    width: 40px; height: 40px;
-    background: var(--grad);
+  .logo { display: flex; align-items: center; cursor: pointer; text-decoration: none; transition: transform 0.2s ease; }
+  .logo:hover { transform: scale(1.03); }
+  .logo-frame {
+    background: #000;
     border-radius: 12px;
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 4px 16px rgba(108,99,255,0.35);
+    padding: 6px 14px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 16px rgba(108,99,255,0.35), inset 0 0 0 1px rgba(108,99,255,0.25);
   }
-  .logo-mark svg { width: 22px; height: 22px; stroke: white; fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
-  .logo-text { display: flex; flex-direction: column; line-height: 1; }
-  .logo-name { font-family: var(--font); font-size: 1.25rem; font-weight: 700; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -0.01em; }
-  .logo-tag { font-family: var(--font); font-size: 0.6rem; font-weight: 500; letter-spacing: 0.18em; color: var(--text-light); margin-top: 3px; }
+  .logo-img { height: 40px; width: auto; display: block; }
 
   .nav-actions { display: flex; gap: 12px; }
   .btn { font-family: var(--font); font-size: 0.875rem; font-weight: 500; padding: 9px 22px; border-radius: 50px; cursor: pointer; transition: all 0.22s ease; border: none; outline: none; }
@@ -418,12 +417,8 @@
 
 <nav>
   <a class="logo" onclick="showHome()">
-    <div class="logo-mark">
-      <svg viewBox="0 0 24 24"><path d="M2 10v3"/><path d="M6 6v11"/><path d="M10 3v18"/><path d="M14 8v7"/><path d="M18 5v13"/><path d="M22 10v3"/></svg>
-    </div>
-    <div class="logo-text">
-      <span class="logo-name">Sound2Text</span>
-      <span class="logo-tag">AUTOMATIC SUBTITLES</span>
+    <div class="logo-frame">
+      <img src="logo.png" alt="Sound2Text" class="logo-img">
     </div>
   </a>
   <div class="nav-actions">
